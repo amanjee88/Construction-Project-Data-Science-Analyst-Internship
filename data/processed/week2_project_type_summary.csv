@@ -1,0 +1,8 @@
+project_type,project_count,mean_schedule_delay_days,median_schedule_delay_days,mean_cost_overrun_pct,on_time_rate_pct
+Bridge,19,37.21,36.0,5.13,0.0
+Commercial,38,31.16,30.5,2.58,2.63
+Hospital,28,29.96,33.0,1.87,14.29
+Industrial,36,31.94,33.0,2.3,13.89
+Residential,47,22.77,21.0,1.61,14.89
+Road,56,33.7,33.0,1.93,3.57
+School,26,30.46,29.5,2.39,3.85

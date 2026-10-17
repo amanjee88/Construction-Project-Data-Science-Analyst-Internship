@@ -1,0 +1,48 @@
+{
+  "rows": 250,
+  "columns": 19,
+  "mean_schedule_delay_days": 30.52,
+  "median_schedule_delay_days": 31.0,
+  "on_time_rate_pct": 8.0,
+  "mean_cost_overrun_pct": 2.31,
+  "median_cost_overrun_pct": 2.2,
+  "over_10pct_cost_overrun_rate_pct": 3.6,
+  "mean_procurement_delay_days": 26.09,
+  "mean_weather_delay_days": 11.21,
+  "correlation_procurement_schedule": 0.604,
+  "correlation_material_cost_overrun": 0.455,
+  "highest_mean_delay_type": "Bridge",
+  "highest_mean_delay_days": 37.21,
+  "lowest_mean_delay_type": "Residential",
+  "lowest_mean_delay_days": 22.77,
+  "audit": {
+    "synthetic_input": true,
+    "rows": 250,
+    "columns": 19,
+    "duplicate_rows": 0,
+    "duplicate_project_ids": 0,
+    "columns_with_missing_values": {},
+    "unique_project_types": 7,
+    "input_note": "Simulated data generated with a fixed seed for reproducibility; not actual project observations."
+  },
+  "models": {
+    "schedule_delay_days": {
+      "model": "Multiple Linear Regression",
+      "test_rows": 50,
+      "mae": 12.152,
+      "rmse": 14.544,
+      "r2": 0.582,
+      "target_mean_test": 28.2,
+      "target_note": "Validation metrics are demonstration results for synthetic data only."
+    },
+    "cost_overrun_pct": {
+      "model": "Multiple Linear Regression",
+      "test_rows": 50,
+      "mae": 3.014,
+      "rmse": 3.796,
+      "r2": 0.18,
+      "target_mean_test": 2.273,
+      "target_note": "Validation metrics are demonstration results for synthetic data only."
+    }
+  }
+}

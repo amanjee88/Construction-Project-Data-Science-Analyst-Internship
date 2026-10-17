@@ -1,0 +1,20 @@
+{
+  "schedule_delay_days": {
+    "model": "Multiple Linear Regression",
+    "test_rows": 50,
+    "mae": 12.152,
+    "rmse": 14.544,
+    "r2": 0.582,
+    "target_mean_test": 28.2,
+    "target_note": "Validation metrics are demonstration results for synthetic data only."
+  },
+  "cost_overrun_pct": {
+    "model": "Multiple Linear Regression",
+    "test_rows": 50,
+    "mae": 3.014,
+    "rmse": 3.796,
+    "r2": 0.18,
+    "target_mean_test": 2.273,
+    "target_note": "Validation metrics are demonstration results for synthetic data only."
+  }
+}

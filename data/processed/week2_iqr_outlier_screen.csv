@@ -1,0 +1,5 @@
+variable,q1,q3,iqr_lower_fence,iqr_upper_fence,flagged_count,action
+schedule_delay_days,16.25,43.0,-23.88,83.12,4,Flag for domain review; do not auto-delete
+cost_overrun_pct,-0.67,5.22,-9.51,14.07,2,Flag for domain review; do not auto-delete
+procurement_delay_days,11.0,37.0,-28.0,76.0,5,Flag for domain review; do not auto-delete
+material_cost_index,102.16,120.91,74.04,149.03,0,Flag for domain review; do not auto-delete
