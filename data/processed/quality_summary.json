@@ -1,0 +1,11 @@
+{
+  "synthetic_input": true,
+  "input_path": "data/raw/construction_projects_simulated_raw.csv",
+  "rows_read": 51,
+  "columns_read": 23,
+  "exact_duplicate_rows": 1,
+  "rows_with_duplicate_project_id": 2,
+  "rows_flagged_for_manual_review": 7,
+  "rows_in_staging": 51,
+  "note": "Staging is standardized, not analyst-approved or model-ready. Missing values are not silently imputed."
+}
