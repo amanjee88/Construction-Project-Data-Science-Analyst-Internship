@@ -1,0 +1,8 @@
+risk_area,likelihood_1_to_5,impact_1_to_5,priority_score,priority_band,owner,first_response
+Schedule / adverse weather,4,5,20,Critical,Project planner + site manager,"Seasonal work plan, phase look-ahead, recovery actions and protected schedule buffer"
+Supplier / procurement delays,5,4,20,Critical,Procurement lead,"Long-lead tracker, confirmed promise dates, escalation rules and alternate suppliers"
+Design changes / rework,4,4,16,High,Design manager + client representative,"Design-freeze gates, RFI ageing review and multidisciplinary clash checks"
+Cost overrun / commitment drift,3,5,15,High,Cost controller / quantity surveyor,"Monthly estimate-at-completion and reconciliation of commitments, actuals and changes"
+Ground / site uncertainty,3,4,12,High,Site engineer + geotechnical lead,"Targeted surveys, explicit assumptions, contingency ownership and escalation"
+Safety-critical activities,2,5,10,High - safety critical,HSE officer + site leadership,"Task risk assessments, permits, toolbox talks and verified close-out of safety actions"
+Labor availability / productivity,2,3,6,Moderate-high,Construction manager,"Rolling trade-wise crew forecast, subcontractor confirmation and productivity review"

@@ -1,0 +1,103 @@
+{
+  "report_title": "Data Visualization, Reporting, and Actionable Insights",
+  "data_caveat": "Week 1, Week 2 and Week 3 used separate synthetic samples and distinct objectives. Summary themes are synthesized, but records are not row-merged and no metric is an observed industry benchmark.",
+  "week1_data_acquisition_sample": {
+    "rows": 51,
+    "columns": 23,
+    "exact_duplicate_rows": 1,
+    "rows_with_duplicate_project_id": 2,
+    "rows_flagged_for_manual_review": 7,
+    "note": "Raw starter fixture with intentionally introduced data-quality issues."
+  },
+  "week2_eda_sample": {
+    "rows": 250,
+    "columns": 19,
+    "mean_schedule_delay_days": 30.52,
+    "median_schedule_delay_days": 31.0,
+    "on_time_rate_pct": 8.0,
+    "mean_cost_overrun_pct": 2.31,
+    "over_10pct_cost_overrun_rate_pct": 3.6,
+    "mean_procurement_delay_days": 26.09,
+    "mean_weather_delay_days": 11.21,
+    "correlation_procurement_schedule": 0.604,
+    "correlation_material_cost_overrun": 0.455,
+    "highest_mean_delay_type": "Bridge",
+    "highest_mean_delay_days": 37.21,
+    "lowest_mean_delay_type": "Residential",
+    "lowest_mean_delay_days": 22.77
+  },
+  "week3_risk_sample": {
+    "rows": 500,
+    "columns": 20,
+    "mean_delay_days": 36.69,
+    "median_delay_days": 36.05,
+    "high_delay_rate_30days_pct": 70.6,
+    "mean_cost_overrun_pct": 7.82,
+    "cost_overrun_rate_10pct_pct": 23.6,
+    "safety_incident_project_rate_pct": 63.6,
+    "delay_linear_regression": {
+      "holdout_MAE_days": 6.521,
+      "holdout_RMSE_days": 8.457,
+      "holdout_R2": 0.541,
+      "cv_R2_mean": 0.596,
+      "cv_R2_std": 0.022
+    },
+    "delay_random_forest": {
+      "holdout_MAE_days": 7.526,
+      "holdout_RMSE_days": 9.483,
+      "holdout_R2": 0.423,
+      "cv_R2_mean": 0.445,
+      "cv_R2_std": 0.068
+    },
+    "cost_risk_logistic_regression": {
+      "accuracy": 0.77,
+      "precision": 0.515,
+      "recall": 0.708,
+      "f1": 0.596,
+      "roc_auc": 0.826,
+      "cv_roc_auc_mean": 0.763,
+      "cv_roc_auc_std": 0.04
+    },
+    "cost_risk_random_forest": {
+      "accuracy": 0.81,
+      "precision": 0.778,
+      "recall": 0.292,
+      "f1": 0.424,
+      "roc_auc": 0.814,
+      "cv_roc_auc_mean": 0.726,
+      "cv_roc_auc_std": 0.044
+    }
+  },
+  "scenario_analysis": [
+    {
+      "scenario": "Baseline high-risk project",
+      "predicted_delay_days": 73.3,
+      "predicted_cost_overrun_probability": 0.9646,
+      "changed_inputs": NaN
+    },
+    {
+      "scenario": "Supplier coordination (-5 supplier-delay days)",
+      "predicted_delay_days": 69.88,
+      "predicted_cost_overrun_probability": 0.9493,
+      "changed_inputs": "supplier_delay_days: -5"
+    },
+    {
+      "scenario": "Design freeze (-2 design changes)",
+      "predicted_delay_days": 65.34,
+      "predicted_cost_overrun_probability": 0.9272,
+      "changed_inputs": "design_changes_count: -2"
+    },
+    {
+      "scenario": "Workforce plan (+10 percentage points)",
+      "predicted_delay_days": 71.91,
+      "predicted_cost_overrun_probability": 0.9631,
+      "changed_inputs": "labor_availability_pct: +10"
+    },
+    {
+      "scenario": "Combined controls",
+      "predicted_delay_days": 57.97,
+      "predicted_cost_overrun_probability": 0.8544,
+      "changed_inputs": "supplier_delay_days: -5; design_changes_count: -2; labor_availability_pct: +10; schedule_buffer_pct: +3; subcontractor_rating_1_5: +0.5"
+    }
+  ]
+}

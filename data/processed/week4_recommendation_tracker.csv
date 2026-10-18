@@ -1,0 +1,7 @@
+horizon,action,owner,measure_of_success
+0-30 days,"Establish a weekly control-room dashboard for schedule, procurement, cost, rework and safety indicators.",Project controls lead,Named owner and current status for every critical indicator; overdue actions visible
+0-30 days,"Create a long-lead procurement tracker with promise date, required-on-site date and escalation owner.",Procurement lead,"All critical materials have verified dates, contingency options and escalation triggers"
+31-60 days,Pilot a delay-risk score using only information available at the forecast date; review it with planners.,Data analyst + project planner,"Back-tested error, recall and false-alert rate documented on held-out real projects"
+31-60 days,Introduce design-freeze and RFI-ageing checkpoints for packages on the critical path.,Design manager,Open critical RFIs and unapproved changes are reviewed at each weekly meeting
+61-90 days,Run a controlled pilot across multiple real projects and compare forecast quality by project type and phase.,PMO / project controls,Time-based or project-group validation completed; model limits and escalation rules approved
+Ongoing,Keep safety checks independent from the schedule/cost model; investigate incidents and near misses using formal controls.,HSE lead + site management,Required safety actions closed on time; no model score used to relax a safety control
