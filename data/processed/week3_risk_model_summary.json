@@ -1,0 +1,102 @@
+{
+  "dataset_rows": 500,
+  "dataset_columns": 20,
+  "train_rows": 400,
+  "test_rows": 100,
+  "mean_delay_days": 36.69,
+  "median_delay_days": 36.05,
+  "high_delay_rate_30_days": 0.706,
+  "mean_cost_overrun_pct": 7.82,
+  "cost_overrun_rate_10pct": 0.236,
+  "projects_with_safety_incidents_rate": 0.636,
+  "best_delay_model_by_holdout_r2": "Linear Regression",
+  "best_cost_overrun_model_by_holdout_roc_auc": "Logistic Regression",
+  "delay_regression_metrics": [
+    {
+      "model": "Linear Regression",
+      "test_MAE_days": 6.521,
+      "test_RMSE_days": 8.457,
+      "test_R2": 0.541,
+      "cv_R2_mean": 0.596,
+      "cv_R2_std": 0.022,
+      "cv_MAE_mean_days": 6.778,
+      "cv_RMSE_mean_days": 8.534
+    },
+    {
+      "model": "Random Forest Regressor",
+      "test_MAE_days": 7.526,
+      "test_RMSE_days": 9.483,
+      "test_R2": 0.423,
+      "cv_R2_mean": 0.445,
+      "cv_R2_std": 0.068,
+      "cv_MAE_mean_days": 7.852,
+      "cv_RMSE_mean_days": 9.985
+    }
+  ],
+  "cost_overrun_classification_metrics": [
+    {
+      "model": "Logistic Regression",
+      "test_accuracy": 0.77,
+      "test_precision": 0.515,
+      "test_recall": 0.708,
+      "test_F1": 0.596,
+      "test_ROC_AUC": 0.826,
+      "cv_ROC_AUC_mean": 0.763,
+      "cv_ROC_AUC_std": 0.04,
+      "cv_F1_mean": 0.507,
+      "cv_Recall_mean": 0.65
+    },
+    {
+      "model": "Random Forest Classifier",
+      "test_accuracy": 0.81,
+      "test_precision": 0.778,
+      "test_recall": 0.292,
+      "test_F1": 0.424,
+      "test_ROC_AUC": 0.814,
+      "cv_ROC_AUC_mean": 0.726,
+      "cv_ROC_AUC_std": 0.044,
+      "cv_F1_mean": 0.344,
+      "cv_Recall_mean": 0.256
+    }
+  ],
+  "scenario_analysis": [
+    {
+      "scenario": "Baseline high-risk project",
+      "predicted_delay_days": 73.3,
+      "predicted_cost_overrun_probability": 0.9646,
+      "changed_inputs": "None"
+    },
+    {
+      "scenario": "Supplier coordination (-5 supplier-delay days)",
+      "predicted_delay_days": 69.88,
+      "predicted_cost_overrun_probability": 0.9493,
+      "changed_inputs": "supplier_delay_days: -5"
+    },
+    {
+      "scenario": "Design freeze (-2 design changes)",
+      "predicted_delay_days": 65.34,
+      "predicted_cost_overrun_probability": 0.9272,
+      "changed_inputs": "design_changes_count: -2"
+    },
+    {
+      "scenario": "Workforce plan (+10 percentage points)",
+      "predicted_delay_days": 71.91,
+      "predicted_cost_overrun_probability": 0.9631,
+      "changed_inputs": "labor_availability_pct: +10"
+    },
+    {
+      "scenario": "Combined controls",
+      "predicted_delay_days": 57.97,
+      "predicted_cost_overrun_probability": 0.8544,
+      "changed_inputs": "supplier_delay_days: -5; design_changes_count: -2; labor_availability_pct: +10; schedule_buffer_pct: +3; subcontractor_rating_1_5: +0.5"
+    }
+  ],
+  "representative_project_id": "CP-0491",
+  "target_definitions": {
+    "actual_delay_days": "Simulated non-negative number of days beyond the planned schedule.",
+    "cost_overrun_pct": "Simulated percentage difference above the planned budget; small negative values represent under-budget outcomes.",
+    "cost_overrun_flag_10pct": "1 when simulated cost overrun is at least 10%; otherwise 0.",
+    "high_delay_flag_30days": "1 when simulated delay is at least 30 days; otherwise 0."
+  },
+  "data_caveat": "All rows and outcomes are synthetic. Holdout and cross-validation metrics demonstrate the workflow only and must not be interpreted as production performance."
+}

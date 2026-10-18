@@ -1,0 +1,6 @@
+scenario,predicted_delay_days,predicted_cost_overrun_probability,changed_inputs
+Baseline high-risk project,73.3,0.9646,None
+Supplier coordination (-5 supplier-delay days),69.88,0.9493,supplier_delay_days: -5
+Design freeze (-2 design changes),65.34,0.9272,design_changes_count: -2
+Workforce plan (+10 percentage points),71.91,0.9631,labor_availability_pct: +10
+Combined controls,57.97,0.8544,supplier_delay_days: -5; design_changes_count: -2; labor_availability_pct: +10; schedule_buffer_pct: +3; subcontractor_rating_1_5: +0.5

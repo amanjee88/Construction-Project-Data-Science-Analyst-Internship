@@ -1,0 +1,8 @@
+risk_area,mitigation_actions,owner,monitoring_indicators
+Schedule delay / weather,"Seasonal planning, phase-level look-ahead, define recovery activities and schedule buffer",Project planner + site manager,Schedule variance; critical-path slippage; buffer consumed
+Supplier / procurement,"Track long-lead items, confirm approvals, review supplier promises, maintain alternatives for critical items",Procurement lead,On-time delivery rate; supplier delay days; overdue POs
+Design changes / rework,"Design-freeze gates, track RFIs and change approval, multidisciplinary clash reviews",Design manager + client representative,Change count; open RFIs; rework; failed inspections
+Labor availability,"Rolling trade-level workforce forecast, confirm subcontractor crews, cross-train where practical",Construction manager,Labor availability; productivity variance; overtime
+Ground/site uncertainty,Targeted site and geotechnical surveys; document assumptions and contingencies,Site engineer + geotechnical lead,Open site constraints; investigation exceptions; contingency usage
+Cost overrun,Monthly estimate-at-completion updates; reconcile commitments and actuals; enforce change control,Cost controller / quantity surveyor,Cost variance; estimate-at-completion; pending change value
+Safety risk,"Task risk assessments, toolbox talks, permit and control verification, close actions and investigate near misses",HSE officer + site leadership,Training compliance; open actions; near misses; incident trends

@@ -1,0 +1,16 @@
+{
+  "dataset_file": "data/raw/construction_risk_simulated.csv",
+  "rows": 500,
+  "columns": 20,
+  "project_id_unique": true,
+  "duplicate_rows": 0,
+  "missing_cells": 0,
+  "numeric_invalid_checks": {
+    "negative_planned_duration_rows": 0,
+    "rainfall_out_of_range_rows": 0,
+    "labor_availability_out_of_range_rows": 0,
+    "complexity_out_of_range_rows": 0,
+    "ground_risk_out_of_range_rows": 0
+  },
+  "synthetic_data_notice": "All records are simulated and must not be treated as real project data."
+}

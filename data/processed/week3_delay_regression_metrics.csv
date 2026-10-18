@@ -1,0 +1,3 @@
+model,test_MAE_days,test_RMSE_days,test_R2,cv_R2_mean,cv_R2_std,cv_MAE_mean_days,cv_RMSE_mean_days
+Linear Regression,6.521,8.457,0.541,0.596,0.022,6.778,8.534
+Random Forest Regressor,7.526,9.483,0.423,0.445,0.068,7.852,9.985
